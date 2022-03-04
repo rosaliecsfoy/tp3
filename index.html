@@ -36,21 +36,23 @@
         <fieldset class="fieldset_nom-complet">
             <legend>Nom complet</legend>
             <div><label for="prenom">Prénom</label>
-                <input type="prenom" name="prenom" id="prenom"></div>
+                <input type="prenom" name="prenom" id="prenom" required>
+            </div>
             <div><label for="nom">Nom</label>
-                <input type="text" name="nom" id="nom"></div>
+                <input type="text" name="nom" id="nom" required>
+            </div>
                 <!--MESSAGES D'ERREURS-->
         </fieldset>
 
         <div><label for="adresse">Adresse</label>
-            <input type="text" name="adresse" id="adresse"></div>
+            <input type="text" name="adresse" id="adresse" required></div>
         
         <div><label for="ville">Ville</label>
-            <input type="text" name="ville" id="ville"></div>
+            <input type="text" name="ville" id="ville" required></div>
         
         <div>
             <label for="pays">Pays</label>
-            <select name="listePays" id="province" name="province">
+            <select name="listePays" id="province" name="province" required>
 <option value="">province ou état</option>
 <option value="canada" disabled>Canada</option>
 <option value="AB">Alberta</option>
@@ -123,12 +125,12 @@
 
         <div>
         <label for="codePostal">Code postal (X1X 1X1)</label>
-        <input type="text" name="codePostal" id="codePostal" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]">
+        <input type="text" name="codePostal" id="codePostal" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" required>
         </div>
         
         <div>
             <label for="courriel">Courriel</label>
-            <input type="email" name="courriel" id="courriel">
+            <input type="email" name="courriel" id="courriel" required>
         </div>
 
         <fieldset class="fieldset_telephone">
@@ -136,12 +138,12 @@
 
           <div>
               <label for="indicatif">Indicatif</label>
-              <input type="number" name="indicatif" id="indicatif">
+              <input type="number" name="indicatif" id="indicatif" required>
         </div>
 
         <div>
             <label for="numero">Numéro</label>
-            <input type="tel" name="numero" id="numero">
+            <input type="tel" name="numero" id="numero" required>
         </div>
         </fieldset>
 
@@ -150,10 +152,10 @@
             <fieldset>
                 <legend>Date à laquelle la question a été posée?</legend>
                 <label for="jour">Jour</label>
-                <input type="text">
+                <input type="number" min="1" max="31" required>
                 <br>
                 <label for="mois">Mois</label>
-                <select name="listeMois">
+                <select name="listeMois" required>
                     <option value="">Sélectionner</option>
                     <option value="janvier">Janvier</option>
                     <option value="fevrier">Février</option>
@@ -170,13 +172,12 @@
                 </select>
                 <br>
                 <label for="annee">Année</label>
-                <input type="text">
-
+                <input type="number" min="2000" max="2022" required>
             </fieldset>
             <fieldset>
                 <legend>Lequel de ces moments est un mausolée?</legend>
                 <ul class="">
-                    <li class=><input type="radio" id="chateauIf" name="monuments" value="chateauIf"><img src="/images/chateaudIf-small.jpg">Le château d'If</li>
+                    <li class=><input type="radio" id="chateauIf" name="monuments" value="chateauIf" required><img src="/images/chateaudIf-small.jpg">Le château d'If</li>
                     <li class=><input type="radio" id="palaisLuxembourg" name="monuments" value="palaisLuxembourg"><img src="/images/palaisluxembourg-small.jpg">Le palais du Luxembourg</li>
                     <li class=><input type="radio" id="tajMahal" name="monuments" value="tajMahal"><img src="/images/tajmahal-small.jpg">Le Taj Mahal</li>
                 </ul>
@@ -185,7 +186,7 @@
     </form>
     </main>
     <div class="caseACocher">
-        <input type="checkbox" id="confirmation" name="confirmation" value="confirmation">
+        <input type="checkbox" id="confirmation" name="confirmation" value="confirmation" required>
         <label for="confirmation">J'ai lu et j'accepte le <a href="#">règlement du concours</a> et je confirme avoir atteint l'âge de la majorité dans ma province de résidence.</label>
       </div>
       <div class="caseACocher">
