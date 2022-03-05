@@ -22,18 +22,21 @@
     <main id="main" role="main">
     <section><h1>Concours</h1>
 
-    <aside>Complétez le coupon de participation et répondez à la question du jour ci-dessous.
+    <aside>
+        <p>Complétez le coupon de participation et répondez à la question du jour ci-dessous.</p>
 
-        <br>30 finalistes accompagnés seront invités le jeudi 1er mars au restaurant
+        <p>30 finalistes accompagnés seront invités le jeudi 1er mars au restaurant
         Blumenthal pour un petit déjeuner préparé par le chef Rémi Brunelle. Parmi
         les finalistes présents, un grand gagnant s’envolera vers la destination de
-        son choix!
+        son choix!</p>
 
-        <br>Vous avez jusqu'au vendredi 9 février à midi pour participer. Bonne chance à tous!</aside>
+        <p>Vous avez jusqu'au vendredi 9 février à midi pour participer. Bonne chance à tous!</p>
+    </aside>
     </section>
 
-    <form><fieldset>
-        <legend class="titre-section"><h2>Coupon de participation</h2></legend>
+    <form action="index.html">
+    <fieldset>
+    <legend><h2>Coupon de participation</h2></legend>
 
         <fieldset class="fieldset_nom-complet">
             <legend>Nom complet</legend>
@@ -43,7 +46,6 @@
             <div><label for="nom">Nom</label>
                 <input type="text" name="nom" id="nom" required>
             </div>
-                <!--MESSAGES D'ERREURS-->
         </fieldset>
 
         <div><label for="adresse">Adresse</label>
@@ -65,7 +67,7 @@
 <option value="NS">Nova Scotia</option>
 <option value="ON">Ontario</option>
 <option value="PE">Prince Edward Island</option>
-<option value="QC">Quebec</option>
+<option value="QC">Québec</option>
 <option value="SK">Saskatchewan</option>
 <option value="NT">Northwest Territories</option>
 <option value="NU">Nunavut</option>
@@ -140,14 +142,15 @@
 
           <div>
               <label for="indicatif">Indicatif</label>
-              <input type="number" name="indicatif" id="indicatif" required>
+              <input type="number" name="indicatif" id="indicatif" required minlength="3" maxlength="3">
         </div>
 
         <div>
             <label for="numero">Numéro</label>
-            <input type="tel" name="numero" id="numero" required>
+            <input type="tel" name="numero" id="numero" required minlength="7" maxlength="7">
         </div>
         </fieldset>
+    </fieldset>
 
         <fieldset>
             <legend class="titre-section">Question du jour</legend>
@@ -185,17 +188,17 @@
                 </ul>
             </fieldset>
         </fieldset>
+        <div class="caseACocher">
+            <input type="checkbox" id="confirmation" name="confirmation" value="confirmation" required>
+            <label for="confirmation">J'ai lu et j'accepte le <a href="#">règlement du concours</a> et je confirme avoir atteint l'âge de la majorité dans ma province de résidence.</label>
+          </div>
+          <div class="caseACocher">
+            <input type="checkbox" id="infolettre" name="infolettre" value="infolettre">
+            <label for="infolettre">Oui, j'accepte de recevoir de la documentation de Radio-Canada.</label>
+          </div>
+          <button>Enregistrer</button>
     </form>
     </main>
-    <div class="caseACocher">
-        <input type="checkbox" id="confirmation" name="confirmation" value="confirmation" required>
-        <label for="confirmation">J'ai lu et j'accepte le <a href="#">règlement du concours</a> et je confirme avoir atteint l'âge de la majorité dans ma province de résidence.</label>
-      </div>
-      <div class="caseACocher">
-        <input type="checkbox" id="infolettre" name="infolettre" value="infolettre">
-        <label for="infolettre">Oui, j'accepte de recevoir de la documentation de Radio-Canada.</label>
-      </div>
-      <input type="submit" value="Enregistrer">
     <footer id="footer" role="footer">
         <p class="copyright"><small>©2022, Rosalie Roy.</small></p>
         <p class="realisation"><small>Réalisé dans le cadre du cours Intégration II, Programme TIM, Cégep de Sainte-Foy.</small></p>
