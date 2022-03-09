@@ -38,13 +38,17 @@
     <fieldset>
     <legend><h2>Coupon de participation</h2></legend>
 
-        <fieldset class="nom-complet">
+        <fieldset class="nom-complet ctnValidation">
             <legend>Nom complet</legend>
-            <div><label for="prenom">Prénom</label>
+            <div class="rangee">
+            <p>
+                <label for="prenom">Prénom</label>
                 <input type="prenom" name="prenom" id="prenom" pattern="[a-zA-Z -  \-]+" required>
-            </div>
-            <div><label for="nom">Nom</label>
+            </p>
+            <p>
+                <label for="nom">Nom</label>
                 <input type="text" name="nom" id="nom" pattern="[a-zA-Z -  \-]+" required>
+            </p>
             </div>
             <p class="erreur">
                 <span>
@@ -55,7 +59,7 @@
             </p>
         </fieldset>
 
-        <div class="adresse"><label for="adresse">Adresse</label>
+        <div class="adresse ctnValidation"><label for="adresse">Adresse</label>
             <input type="text" name="adresse" id="adresse" required>
             <p class="erreur">
                 <span>
@@ -66,7 +70,7 @@
             </p>
         </div>
         
-        <div class="ville"><label for="ville">Ville</label>
+        <div class="ville ctnValidation"><label for="ville">Ville</label>
             <input type="text" name="ville" id="ville" required>
             <p class="erreur">
                 <span>
@@ -77,7 +81,7 @@
             </p>
         </div>
         
-        <div class="region">
+        <div class="region ctnValidation">
             <label for="region">Région</label>
             <select name="listeRegions" id="region" name="region" required>
 <option value="">province ou état</option>
@@ -157,7 +161,7 @@
             </p>
         </div>
 
-        <div class="code-postal">
+        <div class="code-postal ctnValidation">
         <label for="codePostal">Code postal (X1X 1X1)</label>
         <input type="text" name="codePostal" id="codePostal" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" required>
         <p class="erreur">
@@ -169,7 +173,7 @@
         </p>
         </div>
         
-        <div class="courriel">
+        <div class="courriel ctnValidation">
             <label for="courriel">Courriel</label>
             <input type="email" name="courriel" id="courriel" required>
             <p class="erreur">
@@ -181,18 +185,21 @@
             </p>
         </div>
 
-        <fieldset class="telephone">
+        <fieldset class="telephone ctnValidation">
         <legend>Téléphone (indicatif - numéro)</legend>
-
-          <div>
+        <div class="rangee">
+          <p>
               <label for="indicatif">Indicatif</label>
               <input type="number" name="indicatif" id="indicatif" required minlength="3" maxlength="3">
-        </div>
+          </p>
 
-        <div>
+          <p> - </p>
+
+        <p>
             <label for="numero">Numéro</label>
             <input type="tel" name="numero" id="numero" required minlength="7" maxlength="7">
-        </div>
+        </p>
+    </div>
         <p class="erreur">
             <span>
                 <span class="screen-reader-only">Avertissement</span>
@@ -205,8 +212,9 @@
 
         <fieldset>
             <legend>Question du jour</legend>
-            <fieldset class="date">
+            <fieldset class="date ctnValidation">
                 <legend>Date à laquelle la question a été posée?</legend>
+                <div class="rangee">
                 <label for="jour">Jour</label>
                 <input type="number" min="1" max="31" required>
                 <br>
@@ -229,6 +237,7 @@
                 <br>
                 <label for="annee">Année</label>
                 <input type="number" min="2000" max="2022" required>
+            </div>
                 <p class="erreur">
                     <span>
                         <span class="screen-reader-only">Avertissement</span>
@@ -237,7 +246,7 @@
                     SVP, entrez la date complète.
                 </p>
             </fieldset>
-            <fieldset class="question">
+            <fieldset class="question ctnValidation">
                 <legend>Lequel de ces moments est un mausolée?</legend>
                 <ul class="">
                     <li class=><input type="radio" id="chateauIf" name="monuments" value="chateauIf" required><img src="/images/chateaudIf-small.jpg">Le château d'If</li>
@@ -253,7 +262,7 @@
                 </p>
             </fieldset>
         </fieldset>
-        <div class="reglement">
+        <div class="reglement ctnValidation">
             <input type="checkbox" id="confirmation" name="confirmation" value="confirmation" required>
             <label for="confirmation">J'ai lu et j'accepte le <a href="#">règlement du concours</a> et je confirme avoir atteint l'âge de la majorité dans ma province de résidence.</label>
             <p class="erreur">
