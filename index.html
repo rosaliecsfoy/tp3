@@ -46,13 +46,36 @@
             <div><label for="nom">Nom</label>
                 <input type="text" name="nom" id="nom" pattern="[a-zA-Z -  \-]+" required>
             </div>
+            <p class="erreur">
+                <span>
+                    <span class="screen-reader-only">Avertissement</span>
+                    <span class="icone icone--avertissement" aria-hidden="true"></span>
+                </span>
+                Le prénom ou le nom comporte un ou plusieurs caractères interdits.
+            </p>
         </fieldset>
 
         <div class="adresse"><label for="adresse">Adresse</label>
-            <input type="text" name="adresse" id="adresse" required></div>
+            <input type="text" name="adresse" id="adresse" required>
+            <p class="erreur">
+                <span>
+                    <span class="screen-reader-only">Avertissement</span>
+                    <span class="icone icone--avertissement" aria-hidden="true"></span>
+                </span>
+                L'adresse est requise.
+            </p>
+        </div>
         
         <div class="ville"><label for="ville">Ville</label>
-            <input type="text" name="ville" id="ville" required></div>
+            <input type="text" name="ville" id="ville" required>
+            <p class="erreur">
+                <span>
+                    <span class="screen-reader-only">Avertissement</span>
+                    <span class="icone icone--avertissement" aria-hidden="true"></span>
+                </span>
+                Attention, le nom de la ville comporte un ou plusieurs caractères interdits.
+            </p>
+        </div>
         
         <div class="region">
             <label for="region">Région</label>
@@ -125,16 +148,37 @@
 <option value="WI">Wisconsin</option>
 <option value="WY">Wyoming</option>
             </select>
+            <p class="erreur">
+                <span>
+                    <span class="screen-reader-only">Avertissement</span>
+                    <span class="icone icone--avertissement" aria-hidden="true"></span>
+                </span>
+                La province ou l'état d'origine doit être précisé.
+            </p>
         </div>
 
         <div class="code-postal">
         <label for="codePostal">Code postal (X1X 1X1)</label>
         <input type="text" name="codePostal" id="codePostal" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" required>
+        <p class="erreur">
+            <span>
+                <span class="screen-reader-only">Avertissement</span>
+                <span class="icone icone--avertissement" aria-hidden="true"></span>
+            </span>
+            Le code postal doit respecter le format X1X 1X1.
+        </p>
         </div>
         
         <div class="courriel">
             <label for="courriel">Courriel</label>
             <input type="email" name="courriel" id="courriel" required>
+            <p class="erreur">
+                <span>
+                    <span class="screen-reader-only">Avertissement</span>
+                    <span class="icone icone--avertissement" aria-hidden="true"></span>
+                </span>
+                Attention, le courriel comporte un ou plusieurs caractères interdits.
+            </p>
         </div>
 
         <fieldset class="telephone">
@@ -149,6 +193,13 @@
             <label for="numero">Numéro</label>
             <input type="tel" name="numero" id="numero" required minlength="7" maxlength="7">
         </div>
+        <p class="erreur">
+            <span>
+                <span class="screen-reader-only">Avertissement</span>
+                <span class="icone icone--avertissement" aria-hidden="true"></span>
+            </span>
+            Attention, le numéro de téléphone ne doit pas comporter d'espace ou de trait d'union.
+        </p>
         </fieldset>
     </fieldset>
 
@@ -178,6 +229,13 @@
                 <br>
                 <label for="annee">Année</label>
                 <input type="number" min="2000" max="2022" required>
+                <p class="erreur">
+                    <span>
+                        <span class="screen-reader-only">Avertissement</span>
+                        <span class="icone icone--avertissement" aria-hidden="true"></span>
+                    </span>
+                    SVP, entrez la date complète.
+                </p>
             </fieldset>
             <fieldset class="question">
                 <legend>Lequel de ces moments est un mausolée?</legend>
@@ -186,11 +244,25 @@
                     <li class=><input type="radio" id="palaisLuxembourg" name="monuments" value="palaisLuxembourg"><img src="/images/palaisluxembourg-small.jpg">Le palais du Luxembourg</li>
                     <li class=><input type="radio" id="tajMahal" name="monuments" value="tajMahal"><img src="/images/tajmahal-small.jpg">Le Taj Mahal</li>
                 </ul>
+                <p class="erreur">
+                    <span>
+                        <span class="screen-reader-only">Avertissement</span>
+                        <span class="icone icone--avertissement" aria-hidden="true"></span>
+                    </span>
+                    Veuillez répondre à la question du jour.
+                </p>
             </fieldset>
         </fieldset>
         <div class="reglement">
             <input type="checkbox" id="confirmation" name="confirmation" value="confirmation" required>
             <label for="confirmation">J'ai lu et j'accepte le <a href="#">règlement du concours</a> et je confirme avoir atteint l'âge de la majorité dans ma province de résidence.</label>
+            <p class="erreur">
+                <span>
+                    <span class="screen-reader-only">Avertissement</span>
+                    <span class="icone icone--avertissement" aria-hidden="true"></span>
+                </span>
+                SVP, acceptez le règlement du concours.
+            </p>
           </div>
           <div class="documentation">
             <input type="checkbox" id="infolettre" name="infolettre" value="infolettre">
