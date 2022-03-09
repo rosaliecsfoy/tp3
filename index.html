@@ -20,7 +20,7 @@
 
     </header>
     <main id="main" role="main">
-    <section><h1>Concours</h1>
+    <section class="entete"><h1>Concours</h1>
 
     <aside>
         <p>Complétez le coupon de participation et répondez à la question du jour ci-dessous.</p>
@@ -38,25 +38,25 @@
     <fieldset>
     <legend><h2>Coupon de participation</h2></legend>
 
-        <fieldset class="fieldset_nom-complet">
+        <fieldset class="nom-complet">
             <legend>Nom complet</legend>
             <div><label for="prenom">Prénom</label>
-                <input type="prenom" name="prenom" id="prenom" required>
+                <input type="prenom" name="prenom" id="prenom" pattern="[a-zA-Z -  \-]+" required>
             </div>
             <div><label for="nom">Nom</label>
-                <input type="text" name="nom" id="nom" required>
+                <input type="text" name="nom" id="nom" pattern="[a-zA-Z -  \-]+" required>
             </div>
         </fieldset>
 
-        <div><label for="adresse">Adresse</label>
+        <div class="adresse"><label for="adresse">Adresse</label>
             <input type="text" name="adresse" id="adresse" required></div>
         
-        <div><label for="ville">Ville</label>
+        <div class="ville"><label for="ville">Ville</label>
             <input type="text" name="ville" id="ville" required></div>
         
-        <div>
-            <label for="pays">Pays</label>
-            <select name="listePays" id="province" name="province" required>
+        <div class="region">
+            <label for="region">Région</label>
+            <select name="listeRegions" id="region" name="region" required>
 <option value="">province ou état</option>
 <option value="canada" disabled>Canada</option>
 <option value="AB">Alberta</option>
@@ -127,17 +127,17 @@
             </select>
         </div>
 
-        <div>
+        <div class="code-postal">
         <label for="codePostal">Code postal (X1X 1X1)</label>
         <input type="text" name="codePostal" id="codePostal" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" required>
         </div>
         
-        <div>
+        <div class="courriel">
             <label for="courriel">Courriel</label>
             <input type="email" name="courriel" id="courriel" required>
         </div>
 
-        <fieldset class="fieldset_telephone">
+        <fieldset class="telephone">
         <legend>Téléphone (indicatif - numéro)</legend>
 
           <div>
@@ -153,8 +153,8 @@
     </fieldset>
 
         <fieldset>
-            <legend class="titre-section">Question du jour</legend>
-            <fieldset>
+            <legend>Question du jour</legend>
+            <fieldset class="date">
                 <legend>Date à laquelle la question a été posée?</legend>
                 <label for="jour">Jour</label>
                 <input type="number" min="1" max="31" required>
@@ -179,7 +179,7 @@
                 <label for="annee">Année</label>
                 <input type="number" min="2000" max="2022" required>
             </fieldset>
-            <fieldset>
+            <fieldset class="question">
                 <legend>Lequel de ces moments est un mausolée?</legend>
                 <ul class="">
                     <li class=><input type="radio" id="chateauIf" name="monuments" value="chateauIf" required><img src="/images/chateaudIf-small.jpg">Le château d'If</li>
@@ -188,11 +188,11 @@
                 </ul>
             </fieldset>
         </fieldset>
-        <div class="caseACocher">
+        <div class="reglement">
             <input type="checkbox" id="confirmation" name="confirmation" value="confirmation" required>
             <label for="confirmation">J'ai lu et j'accepte le <a href="#">règlement du concours</a> et je confirme avoir atteint l'âge de la majorité dans ma province de résidence.</label>
           </div>
-          <div class="caseACocher">
+          <div class="documentation">
             <input type="checkbox" id="infolettre" name="infolettre" value="infolettre">
             <label for="infolettre">Oui, j'accepte de recevoir de la documentation de Radio-Canada.</label>
           </div>
@@ -200,8 +200,8 @@
     </form>
     </main>
     <footer id="footer" role="footer">
-        <p class="copyright"><small>©2022, Rosalie Roy.</small></p>
-        <p class="realisation"><small>Réalisé dans le cadre du cours Intégration II, Programme TIM, Cégep de Sainte-Foy.</small></p>
+        <p class="soumission"><small>©2022, Rosalie Roy.</small></p>
+        <p class="credits"><small>Réalisé dans le cadre du cours Intégration II, Programme TIM, Cégep de Sainte-Foy.</small></p>
 
     </footer>
     
