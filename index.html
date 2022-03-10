@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TP3 - formulaire accessible</title>
     <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/_normalize.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -19,7 +18,7 @@
         </picture>
 
     </header>
-    <main id="main" role="main">
+    <main id="main" role="main" class="conteneur">
     <section class="entete"><h1>Concours</h1>
 
     <aside>
@@ -41,11 +40,11 @@
         <fieldset class="nom-complet ctnValidation">
             <legend>Nom complet</legend>
             <div class="rangee">
-            <p>
+            <p class="cols_6_de_12">
                 <label for="prenom">Prénom</label>
                 <input type="prenom" name="prenom" id="prenom" pattern="[a-zA-Z -  \-]+" required>
             </p>
-            <p>
+            <p class="cols_6_de_12">
                 <label for="nom">Nom</label>
                 <input type="text" name="nom" id="nom" pattern="[a-zA-Z -  \-]+" required>
             </p>
@@ -188,14 +187,14 @@
         <fieldset class="telephone ctnValidation">
         <legend>Téléphone (indicatif - numéro)</legend>
         <div class="rangee">
-          <p>
+          <p class="cols_5_de_12">
               <label for="indicatif">Indicatif</label>
               <input type="number" name="indicatif" id="indicatif" required minlength="3" maxlength="3">
           </p>
 
-          <p> - </p>
+          <p class="cols_1_de_12"> - </p>
 
-        <p>
+        <p class="cols_5_de_12">
             <label for="numero">Numéro</label>
             <input type="tel" name="numero" id="numero" required minlength="7" maxlength="7">
         </p>
@@ -215,9 +214,11 @@
             <fieldset class="date ctnValidation">
                 <legend>Date à laquelle la question a été posée?</legend>
                 <div class="rangee">
+                    <p class="cols_4_de_12">
                 <label for="jour">Jour</label>
                 <input type="number" min="1" max="31" required>
-                <br>
+            </p>
+                <p class="cols_4_de_12">
                 <label for="mois">Mois</label>
                 <select name="listeMois" required>
                     <option value="">Sélectionner</option>
@@ -234,9 +235,11 @@
                     <option value="novembre">Novembre</option>
                     <option value="decembre">Décembre</option>
                 </select>
-                <br>
+                </p>
+                <p class="cols_4_de_12">
                 <label for="annee">Année</label>
                 <input type="number" min="2000" max="2022" required>
+            </p>
             </div>
                 <p class="erreur">
                     <span>
@@ -248,10 +251,28 @@
             </fieldset>
             <fieldset class="question ctnValidation">
                 <legend>Lequel de ces moments est un mausolée?</legend>
-                <ul class="">
-                    <li class=><input type="radio" id="chateauIf" name="monuments" value="chateauIf" required><img src="/images/chateaudIf-small.jpg">Le château d'If</li>
-                    <li class=><input type="radio" id="palaisLuxembourg" name="monuments" value="palaisLuxembourg"><img src="/images/palaisluxembourg-small.jpg">Le palais du Luxembourg</li>
-                    <li class=><input type="radio" id="tajMahal" name="monuments" value="tajMahal"><img src="/images/tajmahal-small.jpg">Le Taj Mahal</li>
+                <ul class="rangee">
+                    <li class="cols_4_de_12">
+                        <input type="radio" id="chateauIf" name="monuments" value="chateauIf" required>
+                        <label for="Le chateau d'If">
+                            <img src="/images/chateaudIf-small.jpg">
+                            <span class="monument">Le château d'If</span>
+                        </label>
+                    </li>
+                    <li class="cols_4_de_12">
+                        <input type="radio" id="palaisLuxembourg" name="monuments" value="palaisLuxembourg">
+                        <label for="Le palais du Luxembourg">
+                            <img src="/images/palaisluxembourg-small.jpg">
+                            <span class="monument">Le palais du Luxembourg</span>
+                        </label>
+                    </li>
+                    <li class="cols_4_de_12">
+                        <input type="radio" id="tajMahal" name="monuments" value="tajMahal">
+                        <label for="Le Taj Mahal">
+                            <img src="/images/tajmahal-small.jpg">
+                            <span class="monument">Le Taj Mahal</span>
+                        </label>
+                    </li>
                 </ul>
                 <p class="erreur">
                     <span>
