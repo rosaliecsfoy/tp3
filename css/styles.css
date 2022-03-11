@@ -27,8 +27,20 @@
 
 /* Charte typographique
    ========================================================================== */
- 
-
+ @font-face {
+    font-family: "News Cycle Regular";
+    src: url(/polices/News_Cycle/NewsCycle-Regular.woff2)
+    format("woff2"),
+    url(/polices/News_Cycle/NewsCycle-Regular.woff)
+    format("woff");
+ }
+ @font-face {
+    font-family: "News Cycle Bold";
+    src: url(/polices/News_Cycle/NewsCycle-Bold.woff2)
+    format("woff2"),
+    url(/polices/News_Cycle/NewsCycle-Bold.woff)
+    format("woff");
+ }
 /* Grille
    ========================================================================== */
 @import url(_grille.css);
