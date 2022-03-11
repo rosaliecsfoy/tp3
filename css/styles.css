@@ -9,6 +9,7 @@
  * Charte typographique
  * Grille
  * Mise en page
+ *** polices dans la page
  *** entête
  *** main
  *** formulaire
@@ -27,23 +28,32 @@
 
 /* Charte typographique
    ========================================================================== */
- @font-face {
-    font-family: "News Cycle Regular";
-    src: url(/polices/News_Cycle/NewsCycle-Regular.woff2)
-    format("woff2"),
-    url(/polices/News_Cycle/NewsCycle-Regular.woff)
-    format("woff");
- }
- @font-face {
-    font-family: "News Cycle Bold";
-    src: url(/polices/News_Cycle/NewsCycle-Bold.woff2)
-    format("woff2"),
-    url(/polices/News_Cycle/NewsCycle-Bold.woff)
-    format("woff");
- }
+@import url(_typo.css);
 /* Grille
    ========================================================================== */
 @import url(_grille.css);
 
 /* Mise en page
    ========================================================================== */
+
+/* polices dans la page */
+
+body {
+   font-family: "NewsCycle";
+}
+h1 {
+   font-family: "NewsCycle-bold";
+}
+h2 {
+   font-family: "NewsCycle-bold";
+}
+h3 {
+   font-family: "NewsCycle-bold";
+}
+
+/* formulaire */
+
+form {
+   background-color: rgb(230, 230, 230);
+}
+
