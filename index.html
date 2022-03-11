@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <div class="conteneur">
     <header id="header" role="header">
         <!--BANNIÈRE-->
         <picture class="banniere">
@@ -18,7 +19,7 @@
         </picture>
 
     </header>
-    <main id="main" role="main" class="conteneur">
+    <main id="main" role="main">
     <section class="entete"><h1>Concours</h1>
 
     <aside>
@@ -34,7 +35,7 @@
     </section>
 
     <form action="index.html">
-    <fieldset>
+    <fieldset class="informations">
     <legend><h2>Coupon de participation</h2></legend>
 
         <fieldset class="nom-complet ctnValidation">
@@ -42,7 +43,7 @@
             <div class="rangee">
             <p class="cols_6_de_12">
                 <label for="prenom">Prénom</label>
-                <input type="prenom" name="prenom" id="prenom" pattern="[a-zA-Z -  \-]+" required>
+                <input type="text" name="prenom" id="prenom" pattern="[a-zA-Z -  \-]+" required>
             </p>
             <p class="cols_6_de_12">
                 <label for="nom">Nom</label>
@@ -58,8 +59,11 @@
             </p>
         </fieldset>
 
-        <div class="adresse ctnValidation"><label for="adresse">Adresse</label>
-            <input type="text" name="adresse" id="adresse" required>
+        <div class="adresse ctnValidation">
+            <p class="rangee cols_12_de_12">
+                <label for="adresse">Adresse</label>
+                <input type="text" name="adresse" id="adresse" required>
+            </p>
             <p class="erreur">
                 <span>
                     <span class="screen-reader-only">Avertissement</span>
@@ -69,8 +73,11 @@
             </p>
         </div>
         
-        <div class="ville ctnValidation"><label for="ville">Ville</label>
-            <input type="text" name="ville" id="ville" required>
+        <div class="ville ctnValidation">
+            <p class="rangee cols_12_de_12">
+                <label for="ville">Ville</label>
+                <input type="text" name="ville" id="ville" required>
+            </p>
             <p class="erreur">
                 <span>
                     <span class="screen-reader-only">Avertissement</span>
@@ -81,6 +88,7 @@
         </div>
         
         <div class="region ctnValidation">
+            <p class="rangee cols_12_de_12">
             <label for="region">Région</label>
             <select name="listeRegions" id="region" name="region" required>
 <option value="">province ou état</option>
@@ -151,6 +159,7 @@
 <option value="WI">Wisconsin</option>
 <option value="WY">Wyoming</option>
             </select>
+        </p>
             <p class="erreur">
                 <span>
                     <span class="screen-reader-only">Avertissement</span>
@@ -161,8 +170,10 @@
         </div>
 
         <div class="code-postal ctnValidation">
+            <p class="rangee cols_12_de_12">
         <label for="codePostal">Code postal (X1X 1X1)</label>
         <input type="text" name="codePostal" id="codePostal" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" required>
+        </p>
         <p class="erreur">
             <span>
                 <span class="screen-reader-only">Avertissement</span>
@@ -173,8 +184,10 @@
         </div>
         
         <div class="courriel ctnValidation">
+            <p class="rangee cols_12_de_12">
             <label for="courriel">Courriel</label>
             <input type="email" name="courriel" id="courriel" required>
+            </p>
             <p class="erreur">
                 <span>
                     <span class="screen-reader-only">Avertissement</span>
@@ -189,14 +202,14 @@
         <div class="rangee">
           <p class="cols_5_de_12">
               <label for="indicatif">Indicatif</label>
-              <input type="number" name="indicatif" id="indicatif" required minlength="3" maxlength="3">
+              <input type="tel" name="indicatif" id="indicatif" required maxlength="3">
           </p>
 
-          <p class="cols_1_de_12"> - </p>
+          <p class="cols_1_de_12 tiret"> - </p>
 
         <p class="cols_5_de_12">
             <label for="numero">Numéro</label>
-            <input type="tel" name="numero" id="numero" required minlength="7" maxlength="7">
+            <input type="tel" name="numero" id="numero" required maxlength="7">
         </p>
     </div>
         <p class="erreur">
@@ -251,25 +264,37 @@
             </fieldset>
             <fieldset class="question ctnValidation">
                 <legend><h3>Lequel de ces moments est un mausolée?</h3></legend>
-                <ul class="rangee">
+                <ul class="ULsanspuces rangee">
                     <li class="cols_4_de_12">
                         <input type="radio" id="chateauIf" name="monuments" value="chateauIf" required>
                         <label for="Le chateau d'If">
-                            <img src="/images/chateaudIf-small.jpg">
+                            <picture class="picture">
+                                <source srcset="/images/chateaudIf.jpg" media="(max-width:599px)">
+                                <source srcset="/images/chateaudIf-small.jpg" media="(min-width:600px)">
+                                <img src="images/chateaudIf.jpg" alt="">
+                            </picture>
                             <span class="monument">Le château d'If</span>
                         </label>
                     </li>
                     <li class="cols_4_de_12">
                         <input type="radio" id="palaisLuxembourg" name="monuments" value="palaisLuxembourg">
                         <label for="Le palais du Luxembourg">
-                            <img src="/images/palaisluxembourg-small.jpg">
+                            <picture class="picture">
+                                <source srcset="/images/palaisluxembourg.jpg" media="(max-width:599px)">
+                                <source srcset="/images/palaisluxembourg-small.jpg" media="(min-width:600px)">
+                                <img src="images/palaisluxembourg.jpg" alt="">
+                            </picture>
                             <span class="monument">Le palais du Luxembourg</span>
                         </label>
                     </li>
                     <li class="cols_4_de_12">
                         <input type="radio" id="tajMahal" name="monuments" value="tajMahal">
                         <label for="Le Taj Mahal">
-                            <img src="/images/tajmahal-small.jpg">
+                            <picture class="picture">
+                                <source srcset="/images/tajmahal.jpg" media="(max-width:599px)">
+                                <source srcset="/images/tajmahal-small.jpg" media="(min-width:600px)">
+                                <img src="images/tajmahal.jpg" alt="">
+                            </picture>
                             <span class="monument">Le Taj Mahal</span>
                         </label>
                     </li>
@@ -301,6 +326,7 @@
           <button>Enregistrer</button>
     </form>
     </main>
+</div>
     <footer id="footer" role="footer">
         <p class="soumission"><small>©2022, Rosalie Roy.</small></p>
         <p class="credits"><small>Réalisé dans le cadre du cours Intégration II, Programme TIM, Cégep de Sainte-Foy.</small></p>
