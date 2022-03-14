@@ -105,6 +105,10 @@ img{
    background-position:99px 0;
 }
 
+:focus {
+   outline: #00c907 auto 5px;
+}
+
 /* Charte typographique
    ========================================================================== */
 /**
@@ -382,6 +386,9 @@ main {
    background-color:white;
    padding-top:2rem;
    display:block;
+}
+.intro p {
+   padding: var(--padding-text);
 }
 .intro p:first-of-type {
    margin-top:0;
