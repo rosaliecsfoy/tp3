@@ -515,11 +515,17 @@ button, input, optgroup, select, textarea {
 input[type=checkbox] {
    margin-right:1rem
 }
+.reglement, .documentation, button {
+   margin-left: 10px;
+   margin-right: 10px;
+}
 button {
    font-family:NewsCycle-bold,sans-serif;
    padding:1rem;border:.5px solid gray;
    background-color:var(--couleur-secondaire);
    border-radius:1rem;transition:all .5s;
+   margin-top: 20px;
+   margin-bottom: 20px;
 }
 button:hover{transform:scale(1.15);cursor:pointer}
 footer {
