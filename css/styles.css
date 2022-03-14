@@ -500,7 +500,7 @@ input[type=radio]:hover + label img,
 input[type=radio]:focus + label img {
    filter:grayscale(0);
 }
-input[type=radio]:checked+label {
+input[type=radio]:checked+ label {
    filter:grayscale(0);
    border:1px solid black;
 }
