@@ -388,6 +388,11 @@ main {
    padding-top:2rem;
    display:block;
 }
+@media (min-width: 600px) {
+   form {
+      margin-right: 10px;
+   }
+}
 .intro p {
    padding: var(--padding-text);
 }
@@ -502,6 +507,7 @@ input[type=radio]:focus + label img {
 }
 input[type=radio]:checked+ label {
    filter:grayscale(0);
+   display: inline-block;
    border:1px solid black;
 }
 input[type=checkbox] {
