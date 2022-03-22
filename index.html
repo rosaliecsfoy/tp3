@@ -12,7 +12,7 @@
 
 <body>
     <div class="conteneur">
-        <header id="header" role="header">
+        <header id="header" role="banner">
             <!--BANNIÈRE-->
             <picture class="banniere">
                 <source media="(max-width:600px)" srcset="images/bandeau_600.jpg">
@@ -95,9 +95,10 @@
                     <div class="region ctnValidation">
                         <p class="rangee cols_12_de_12">
                             <label for="region">Région</label>
-                            <select name="listeRegions" id="region" name="region" required>
+                            <select id="region"
+                                    name="region" required>
                                 <option value="">province ou état</option>
-                                <option value="canada" disabled>Canada</option>
+                                <optgroup label="Canada">
                                 <option value="AB">Alberta</option>
                                 <option value="BC">British Columbia</option>
                                 <option value="MB">Manitoba</option>
@@ -111,7 +112,8 @@
                                 <option value="NT">Northwest Territories</option>
                                 <option value="NU">Nunavut</option>
                                 <option value="YT">Yukon</option>
-                                <option value="etatsUnis" disabled>États-Unis</option>
+                                </optgroup>
+                                <optgroup label="États-Unis">États-Unis
                                 <option value="AL">Alabama</option>
                                 <option value="AK">Alaska</option>
                                 <option value="AZ">Arizona</option>
@@ -163,6 +165,7 @@
                                 <option value="WV">West Virginia</option>
                                 <option value="WI">Wisconsin</option>
                                 <option value="WY">Wyoming</option>
+                                </optgroup>
                             </select>
                         </p>
                         <p class="erreur">
@@ -205,7 +208,7 @@
 
                     <fieldset class="telephone ctnValidation">
                         <legend>
-                            </h3>Téléphone (indicatif - numéro)</h3>
+                            <h3>Téléphone (indicatif - numéro)</h3>
                         </legend>
                         <div class="rangee">
                             <p class="cols_5_de_12">
@@ -241,11 +244,13 @@
                         <div class="rangee">
                             <p class="cols_4_de_12">
                                 <label for="jour">Jour</label>
-                                <input type="number" min="1" max="31" required>
+                                <input  type="number" min="1" max="31" required
+                                        name="jour" id="jour">
                             </p>
                             <p class="cols_4_de_12">
                                 <label for="mois">Mois</label>
-                                <select name="listeMois" required>
+                                <select name="mois" required
+                                        id="mois">
                                     <option value="">Sélectionner</option>
                                     <option value="janvier">Janvier</option>
                                     <option value="fevrier">Février</option>
@@ -263,7 +268,8 @@
                             </p>
                             <p class="cols_4_de_12">
                                 <label for="annee">Année</label>
-                                <input type="number" min="2000" max="2022" required>
+                                <input type="number" min="2000" max="2022" required
+                                       name="annee" id="annee">
                             </p>
                         </div>
                         <p class="erreur">
@@ -345,7 +351,7 @@
             </form>
         </main>
     </div>
-    <footer id="footer" role="footer">
+    <footer id="footer" role="contentinfo">
         <p class="credits"><small>©2022, Rosalie Roy.</small></p>
         <p class="credits"><small>Réalisé dans le cadre du cours Intégration II, Programme TIM, Cégep de
                 Sainte-Foy.</small></p>
